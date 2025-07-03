@@ -4,6 +4,9 @@ import { useParams } from 'react-router-dom';
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 
+const baseURL = import.meta.env.VITE_API_URL;
+axios.get(`${baseURL}/books`);
+
 const ShowBook = () => {
   const [book, setBook] = useState({});
   const [loading, setLoading] = useState(false);

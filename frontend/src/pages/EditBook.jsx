@@ -5,6 +5,9 @@ import Spinner from '../components/Spinner';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
+const baseURL = import.meta.env.VITE_API_URL;
+axios.get(`${baseURL}/books`);
+
 const EditBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
