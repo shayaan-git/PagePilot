@@ -5,7 +5,6 @@ import { Book } from './models/bookModel.js';
 import booksRoute from './routes/booksRoute.js';
 import cors from 'cors';
 
-import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
 
