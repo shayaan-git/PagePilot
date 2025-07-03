@@ -5,6 +5,9 @@ import { Book } from './models/bookModel.js';
 import booksRoute from './routes/booksRoute.js';
 import cors from 'cors';
 
+require('dotenv').config();
+
+
 const app = express();
 
 // Middleware for parsing request body
