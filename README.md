@@ -27,18 +27,6 @@ A full-stack **Book Store Application** built with the MERN Stack: **MongoDB, Ex
 
 ---
 
-## 📚 What I Learned
-
-- Backend CRUD operations using Express and MongoDB
-- Designing Backend routing and API development
-- Managing **CORS policy** between frontend and backend
-- MongoDB document operations using Mongoose
-- Frontend CRUD integration with backend API
-- React Router for navigation and routing in SPA
-- Error handling and async/await patterns
-
----
-
 ## 📦 Installation
 
 ```bash
