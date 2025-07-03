@@ -8,8 +8,7 @@ import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 import BooksTable from '../components/home/BooksTable';
 import BooksCard from '../components/home/BooksCard';
 
-const baseURL = import.meta.env.VITE_API_URL;
-axios.get(`${baseURL}/books`);
+const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5555';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -19,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('http://localhost:5555/books')
+      .get(`${baseURL}/books`)  // ✅ Use baseURL instead of hardcoded localhost
       .then((response) => {
         setBooks(response.data.data);
         setLoading(false);
