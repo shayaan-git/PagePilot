@@ -5,8 +5,7 @@ import Spinner from '../components/Spinner';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
-const baseURL = import.meta.env.VITE_API_URL;
-axios.get(`${baseURL}/books`);
+const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5555';
 
 const EditBook = () => {
   const [title, setTitle] = useState('');
@@ -19,13 +18,15 @@ const EditBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5555/books/${id}`)
-    .then((response) => {
+    axios
+      .get(`${baseURL}/books`)
+      .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear)
         setTitle(response.data.title)
         setLoading(false);
-      }).catch((error) => {
+      })
+      .catch((error) => {
         setLoading(false);
         alert('An error happened. Please Chack console');
         console.log(error);

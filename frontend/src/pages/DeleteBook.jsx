@@ -5,8 +5,7 @@ import Spinner from '../components/Spinner';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
-const baseURL = import.meta.env.VITE_API_URL;
-axios.get(`${baseURL}/books`);
+const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5555';
 
 const DeleteBook = () => {
   const [loading, setLoading] = useState(false);
@@ -17,7 +16,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`http://localhost:5555/books/${id}`)
+      .delete(`${baseURL}/books`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Deleted successfully', { variant: 'success' });

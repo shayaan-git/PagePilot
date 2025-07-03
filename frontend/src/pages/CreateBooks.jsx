@@ -5,8 +5,7 @@ import Spinner from '../components/Spinner';
 import { useNavigate } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 
-const baseURL = import.meta.env.VITE_API_URL;
-axios.get(`${baseURL}/books`);
+const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5555';
 
 const CreateBooks = () => {
   const [title, setTitle] = useState('');
@@ -24,7 +23,7 @@ const CreateBooks = () => {
     };
     setLoading(true);
     axios
-      .post('http://localhost:5555/books', data)
+      .post(`${baseURL}/books`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Created successfully', { variant: 'success' });
