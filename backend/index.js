@@ -5,7 +5,9 @@ import { Book } from './models/bookModel.js';
 import booksRoute from './routes/booksRoute.js';
 import cors from 'cors';
 
-require('dotenv').config();
+import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 const app = express();
