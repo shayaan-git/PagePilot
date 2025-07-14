@@ -55,4 +55,3 @@ npm run dev
 
 ```
 
-Credits to [Adrian Hajdin - JS Mastery](https://www.youtube.com/c/JavaScriptMastery)
