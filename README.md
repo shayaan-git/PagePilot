@@ -1,6 +1,6 @@
 # 📚 PagePilot
 
-This is a BookStore App - based on MERN Stack.
+A BookStore App using MERN Stack.
 
 A full-stack **Book Store Application** built with the MERN Stack: **MongoDB, Express.js, React, and Node.js**. This project showcases complete **CRUD functionality** on both frontend and backend, featuring a simple and clean UI for managing books.
 
@@ -52,3 +52,7 @@ npm run dev
 
 # Frontend
 npm run dev
+
+```
+
+Credits to [Adrian Hajdin - JS Mastery](https://www.youtube.com/c/JavaScriptMastery)
